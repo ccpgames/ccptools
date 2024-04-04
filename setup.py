@@ -3,20 +3,12 @@ import setuptools
 from ccptools import __version__
 
 
-readme = None
-try:
-    with open('README.md') as f:
-        readme = f.read()
-except Exception as ex:
-    pass
+with open('README.md', encoding='utf-8') as f:
+    readme = f.read()
 
 
-lic = None
-try:
-    with open('LICENSE') as f:
-        lic = f.read()
-except Exception as ex:
-    pass
+with open('LICENSE', encoding='utf-8') as f:
+    lic = f.read()
 
 
 setuptools.setup(

@@ -11,12 +11,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
       - name: Install dependencies
         run: |
+          python --version
           python -m pip install --upgrade pip
-          pip install setuptools wheel twine
+          pip install --upgrade setuptools wheel twine
       - name: Run unit tests
         run: |
           python -m unittest discover -v -f ./tests
