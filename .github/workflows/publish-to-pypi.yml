@@ -1,0 +1,27 @@
+name: Publish Python Package
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    container: python:3.8-alpine3.19
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
+      - name: Run unit tests
+        run: |
+          python -m unittest discover -v -f ./tests
+      - name: Build and package
+        run: |
+          python setup.py sdist bdist_wheel
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.2
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}

@@ -1,0 +1,415 @@
+{
+    "tickets": [
+        {
+            "url": "https://ccpcommunity.zendesk.com/api/v2/tickets/766926.json",
+            "id": 766926,
+            "external_id": null,
+            "via": {
+                "channel": "web",
+                "source": {
+                    "from": {},
+                    "to": {},
+                    "rel": null
+                }
+            },
+            "created_at": "2018-08-09T08:46:02Z",
+            "updated_at": "2018-08-09T08:46:02Z",
+            "type": null,
+            "subject": "TEST FROM DODDI!",
+            "raw_subject": "TEST FROM DODDI!",
+            "description": "Here's ALL the horrible unicode characters that keep breaking our systems:\r\n\r\nU+1F600: 😀\r\nU+1F601: 😁\r\nU+1F602: 😂\r\nU+1F603: 😃\r\nU+1F604: 😄\r\nU+1F605: 😅\r\nU+1F606: 😆\r\nU+1F607: 😇\r\nU+1F608: 😈\r\nU+1F609: 😉\r\nU+1F60A: 😊\r\nU+1F60B: 😋\r\nU+1F60C: 😌\r\nU+1F60D: 😍\r\nU+1F60E: 😎\r\nU+1F60F: 😏\r\n\r\nAnd so on...\r\n😐\t😑\t😒\t😓\t😔\t😕\t😖\t😗\t😘\t😙\t😚\t😛\t😜\t😝\t😞\t😟\r\n😠\t😡\t😢\t😣\t😤\t😥\t😦\t😧\t😨\t😩\t😪\t😫\t😬\t😭\t😮\t😯\r\n😰\t😱\t😲\t😳\t😴\t😵\t😶\t😷\t😸\t😹\t😺\t😻\t😼\t😽\t😾\t😿\r\n🙀\t🙁\t🙂\t🙃\t🙄\t🙅\t🙆\t🙇\t🙈\t🙉\t🙊\t🙋\t🙌\t🙍\t🙎\t🙏",
+            "priority": "high",
+            "status": "new",
+            "recipient": null,
+            "requester_id": 426623425,
+            "submitter_id": 426623425,
+            "assignee_id": null,
+            "organization_id": null,
+            "group_id": 24471261,
+            "collaborator_ids": [],
+            "follower_ids": [],
+            "email_cc_ids": [],
+            "forum_topic_id": null,
+            "problem_id": null,
+            "has_incidents": false,
+            "is_public": true,
+            "due_at": null,
+            "tags": [
+                "english",
+                "loginissue_network",
+                "top_priority",
+                "ztoken_46d3640d60514ff7a8c1ff0504fd4e83",
+                "zuid_93f1b4e4xo82589131"
+            ],
+            "custom_fields": [
+                {
+                    "id": 28358409,
+                    "value": null
+                },
+                {
+                    "id": 28358429,
+                    "value": null
+                },
+                {
+                    "id": 28358449,
+                    "value": null
+                },
+                {
+                    "id": 45363769,
+                    "value": null
+                },
+                {
+                    "id": 45178945,
+                    "value": null
+                },
+                {
+                    "id": 26968642,
+                    "value": null
+                },
+                {
+                    "id": 28358469,
+                    "value": null
+                },
+                {
+                    "id": 27892809,
+                    "value": null
+                },
+                {
+                    "id": 28510305,
+                    "value": "loginissue_network"
+                },
+                {
+                    "id": 43089505,
+                    "value": null
+                },
+                {
+                    "id": 28527465,
+                    "value": null
+                },
+                {
+                    "id": 25758572,
+                    "value": null
+                },
+                {
+                    "id": 32667245,
+                    "value": null
+                },
+                {
+                    "id": 42995569,
+                    "value": null
+                },
+                {
+                    "id": 32805489,
+                    "value": null
+                },
+                {
+                    "id": 27791989,
+                    "value": null
+                },
+                {
+                    "id": 26841722,
+                    "value": "top_priority"
+                },
+                {
+                    "id": 30430589,
+                    "value": null
+                },
+                {
+                    "id": 32667265,
+                    "value": null
+                },
+                {
+                    "id": 32771209,
+                    "value": null
+                },
+                {
+                    "id": 32528009,
+                    "value": null
+                },
+                {
+                    "id": 30430609,
+                    "value": null
+                },
+                {
+                    "id": 30574225,
+                    "value": null
+                },
+                {
+                    "id": 32673689,
+                    "value": null
+                },
+                {
+                    "id": 23099035,
+                    "value": null
+                },
+                {
+                    "id": 31798945,
+                    "value": null
+                },
+                {
+                    "id": 30574245,
+                    "value": null
+                },
+                {
+                    "id": 32677285,
+                    "value": null
+                },
+                {
+                    "id": 26791851,
+                    "value": "english"
+                },
+                {
+                    "id": 32528049,
+                    "value": null
+                },
+                {
+                    "id": 30574265,
+                    "value": null
+                },
+                {
+                    "id": 26790841,
+                    "value": null
+                },
+                {
+                    "id": 32528069,
+                    "value": null
+                },
+                {
+                    "id": 32898765,
+                    "value": null
+                },
+                {
+                    "id": 27064281,
+                    "value": null
+                },
+                {
+                    "id": 28358369,
+                    "value": null
+                },
+                {
+                    "id": 27102691,
+                    "value": null
+                },
+                {
+                    "id": 28511205,
+                    "value": null
+                },
+                {
+                    "id": 32809705,
+                    "value": null
+                },
+                {
+                    "id": 28358389,
+                    "value": null
+                },
+                {
+                    "id": 22998005,
+                    "value": null
+                },
+                {
+                    "id": 28511225,
+                    "value": null
+                },
+                {
+                    "id": 45527545,
+                    "value": null
+                },
+                {
+                    "id": 360000190969,
+                    "value": null
+                }
+            ],
+            "satisfaction_rating": {
+                "score": "unoffered"
+            },
+            "sharing_agreement_ids": [],
+            "fields": [
+                {
+                    "id": 28358409,
+                    "value": null
+                },
+                {
+                    "id": 28358429,
+                    "value": null
+                },
+                {
+                    "id": 28358449,
+                    "value": null
+                },
+                {
+                    "id": 45363769,
+                    "value": null
+                },
+                {
+                    "id": 45178945,
+                    "value": null
+                },
+                {
+                    "id": 26968642,
+                    "value": null
+                },
+                {
+                    "id": 28358469,
+                    "value": null
+                },
+                {
+                    "id": 27892809,
+                    "value": null
+                },
+                {
+                    "id": 28510305,
+                    "value": "loginissue_network"
+                },
+                {
+                    "id": 43089505,
+                    "value": null
+                },
+                {
+                    "id": 28527465,
+                    "value": null
+                },
+                {
+                    "id": 25758572,
+                    "value": null
+                },
+                {
+                    "id": 32667245,
+                    "value": null
+                },
+                {
+                    "id": 42995569,
+                    "value": null
+                },
+                {
+                    "id": 32805489,
+                    "value": null
+                },
+                {
+                    "id": 27791989,
+                    "value": null
+                },
+                {
+                    "id": 26841722,
+                    "value": "top_priority"
+                },
+                {
+                    "id": 30430589,
+                    "value": null
+                },
+                {
+                    "id": 32667265,
+                    "value": null
+                },
+                {
+                    "id": 32771209,
+                    "value": null
+                },
+                {
+                    "id": 32528009,
+                    "value": null
+                },
+                {
+                    "id": 30430609,
+                    "value": null
+                },
+                {
+                    "id": 30574225,
+                    "value": null
+                },
+                {
+                    "id": 32673689,
+                    "value": null
+                },
+                {
+                    "id": 23099035,
+                    "value": null
+                },
+                {
+                    "id": 31798945,
+                    "value": null
+                },
+                {
+                    "id": 30574245,
+                    "value": null
+                },
+                {
+                    "id": 32677285,
+                    "value": null
+                },
+                {
+                    "id": 26791851,
+                    "value": "english"
+                },
+                {
+                    "id": 32528049,
+                    "value": null
+                },
+                {
+                    "id": 30574265,
+                    "value": null
+                },
+                {
+                    "id": 26790841,
+                    "value": null
+                },
+                {
+                    "id": 32528069,
+                    "value": null
+                },
+                {
+                    "id": 32898765,
+                    "value": null
+                },
+                {
+                    "id": 27064281,
+                    "value": null
+                },
+                {
+                    "id": 28358369,
+                    "value": null
+                },
+                {
+                    "id": 27102691,
+                    "value": null
+                },
+                {
+                    "id": 28511205,
+                    "value": null
+                },
+                {
+                    "id": 32809705,
+                    "value": null
+                },
+                {
+                    "id": 28358389,
+                    "value": null
+                },
+                {
+                    "id": 22998005,
+                    "value": null
+                },
+                {
+                    "id": 28511225,
+                    "value": null
+                },
+                {
+                    "id": 45527545,
+                    "value": null
+                },
+                {
+                    "id": 360000190969,
+                    "value": null
+                }
+            ],
+            "followup_ids": [],
+            "ticket_form_id": 136669,
+            "brand_id": 139559,
+            "satisfaction_probability": null,
+            "allow_channelback": false,
+            "allow_attachments": true
+        }
+    ],
+    "next_page": null,
+    "previous_page": null,
+    "count": 1
+}
