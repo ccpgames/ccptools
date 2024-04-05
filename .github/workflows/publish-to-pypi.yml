@@ -9,23 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python
+      - name: Set up Python 2
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - name: Install dependencies
+      - name: Install Dependencies 2
         run: |
           python --version
           python -m pip install --upgrade pip
           pip install --upgrade setuptools wheel twine
-      - name: Run unit tests
+      - name: Run Unit Tests 2
         run: |
           python -m unittest discover -v -f ./tests
-      - name: Build and package
+      - name: Build and Package 2
         run: |
+          echo WHATTHEHELL
+          pip freeze
           python setup.py sdist bdist_wheel
-      - name: Publish to PyPI
+      - name: Publish to PyPI 2
         uses: pypa/gh-action-pypi-publish@v1.4.2
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
+          verbose: true
