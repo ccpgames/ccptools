@@ -1,0 +1,49 @@
+[build-system]
+requires = [ "setuptools>=42", "wheel" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccptools"
+dynamic = ["version"]
+description = "The CCP Tools team utilities for date and/or time objects and values and messing with types."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+authors = [
+    { name = "Thordur Matthiasson", email = "thordurm@ccpgames.com" },
+    { name = "John Aldis", email = "johnaldis@ccpgames.com" }
+]
+keywords = [ "datetimeutils", "datetime", "typeutils", "type", "singleton", "date", "time", "timespan", "tools", "ccp", "utils" ]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Intended Audience :: Developers",
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/ccpgames/ccptools"
+Documentation = "https://github.com/ccpgames/ccptools/blob/main/README.md"
+Repository = "https://github.com/ccpgames/ccptools.git"
+Issues = "https://github.com/ccpgames/ccptools/issues"
+Changelog = "https://github.com/ccpgames/ccptools/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = {attr = "ccptools.__version__"}
+
+[tool.setuptools.packages.find]
+where = [ "." ]
+exclude = [ "tests", "tests.*" ]
