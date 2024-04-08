@@ -2,7 +2,9 @@ __all__ = [
     'float_eval',
     'int_eval',
     'bool_eval',
+    'enum_eval',
 ]
+
 from ccptools.tpu.structs import *
 from ccptools._common import decode_bytes  # noqa
 
@@ -15,6 +17,8 @@ _AFFIRMATIVE = {
     'yes',
     'y',
 }
+
+_T_ENUM_CLASS = TypeVar('T_ENUM_CLASS', bound=enum.Enum)
 
 
 def float_eval(value: Any, default: Union[float, None] = 0.0, raise_on_fail: bool = False) -> Union[float, None]:
@@ -42,7 +46,7 @@ def float_eval(value: Any, default: Union[float, None] = 0.0, raise_on_fail: boo
     elif isinstance(value, (str, bytes)):
         try:
             return float(value)
-        except (TypeError, ValueError) as ex:
+        except (TypeError, ValueError):
             if raise_on_fail:
                 raise
             return default
@@ -87,26 +91,19 @@ def int_eval(value: Any, default: Union[int, None] = 0, raise_on_fail: bool = Fa
     elif isinstance(value, float):
         return int(value)
 
-    elif isinstance(value, bytes):
+    elif isinstance(value, (str, bytes)):
         try:
-            value = decode_bytes(value)
-        except UnicodeError as ex:
-            if raise_on_fail:
-                raise
-            return default
-
-    if isinstance(value, str):
-        try:
-            if '.' in value:
-                return int(float(value))
-
-            elif value.startswith('0') or value.startswith('-0'):
-                return int(value, base=0)
-
-            return int(value)
+            return int(value, base=0)
 
         except (TypeError, ValueError):
-            return default
+            try:
+                return int(float(value))
+
+            except (TypeError, ValueError):
+                if raise_on_fail:
+                    raise
+
+                return default
 
     elif isinstance(value, datetime.timedelta):
         return int(value.total_seconds())
@@ -171,7 +168,7 @@ def bool_eval(value: Any, raise_on_fail: bool = False) -> bool:
     if isinstance(value, bytes):
         try:
             value = decode_bytes(value)
-        except ValueError as ex:
+        except ValueError:
             if raise_on_fail:
                 raise
             return False
@@ -204,3 +201,45 @@ def bool_eval(value: Any, raise_on_fail: bool = False) -> bool:
     else:
         return False
 
+
+def enum_eval(value: Any,
+              enum_class: Type[_T_ENUM_CLASS],
+              default: Union[_T_ENUM_CLASS, None] = None,
+              raise_on_fail: bool = False) -> _T_ENUM_CLASS:
+    if isinstance(value, enum_class):
+        return value
+
+    if isinstance(value, enum.Enum):
+        value = value.value
+
+    if isinstance(value, bytes):
+        try:
+            value = decode_bytes(value)
+        except ValueError:
+            if raise_on_fail:
+                raise
+            return default
+
+    if isinstance(value, str):
+        hit = {o.name.lower(): o for o in enum_class}.get(value.strip().lower(), None)
+        if hit is not None:
+            return hit
+        try:
+            value = int(value, base=0)
+        except ValueError:
+            if raise_on_fail:
+                raise ValueError(f'{value!r} is not a valid {enum_class.__name__}')
+            return default
+
+    if isinstance(value, int):
+        try:
+            return enum_class(value)
+        except ValueError:
+            if raise_on_fail:
+                raise
+            return default
+
+    if raise_on_fail:
+        raise ValueError(f'{value!r} is not a valid {enum_class.__name__}')
+
+    return default
