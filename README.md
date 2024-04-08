@@ -103,8 +103,11 @@ TimeZone = datetime.timezone
 ```
 
 Furthermore, it'll also include a few of the most commonly used utility 
-classes from the Type Utils submodule, the `Singleton` Meta Class and the 
-`Empty` and `EmptyDict` classes as well as the `if_empty` method.
+classes from the Type Utils submodule:
+
+- The `Singleton` Meta Class 
+- The `Empty` and `EmptyDict` classes as well as the `if_empty` method
+- The `EnumEx` base class for Enums with the `from_any` class method
 
 So in most cases we can cover something like 90% of any imports we tend to 
 need in every Python file with a single line:
