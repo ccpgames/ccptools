@@ -90,7 +90,7 @@ def any_to_datetime(temporal_object: T_TEMPORAL_VALUE,
                 # This range means that the number, if treated as an instant,
                 # represents a datetime within 1000 years to/from now so it's the
                 # second most likely bet!
-                return timestamp_to_datetime(temporal_object)
+                return instant_to_datetime(temporal_object)
 
             # This number is so large that it's most likely a filetime!
             return filetime_to_datetime(temporal_object)

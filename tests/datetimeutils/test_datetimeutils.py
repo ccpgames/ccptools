@@ -20,6 +20,7 @@ class DateTimeUtilsTest(unittest.TestCase):
         assertSame(119445914047564820, (1979, 7, 6, 14, 3, 24, 756482))
         assertSame(300117804, (1979, 7, 6, 14, 3, 24))
         assertSame(300117804.321321, (1979, 7, 6, 14, 3, 24, 321321))
+        assertSame(300117804321.321, (1979, 7, 6, 14, 3, 24, 321321))
         assertSame(1570875489.134, (2019, 10, 12, 10, 18, 9, 134000))
 
         assertSame(None, None)
