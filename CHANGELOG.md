@@ -6,6 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.1] - 2024-22-05
+
+### Added
+
+- Super basic unittests for `instant_to_datetime` and `timestamp_to_datetime` 
+  cause there was a super dumb error which those would have caught 
+
+
+### Changed
+
+- The unittest for `any_to_datetime` to account for "instant"
+
+
+### Fixed
+
+- The `any_to_datetime` call where it's accidentally casting "instants" to 
+  "timestamps"
+
+
 ## [1.2.0] - 2024-22-05
 
 ### Added
@@ -15,14 +34,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   UNIX Epoch as a float) that work even on Windows when the built in 
   `datetime.timestamp()` and `datetime.fromtimestamp()` methods fail for 
   negative values and more
-- Methods for casting between Datetime and "instance" (number of milliseconds 
+- Methods for casting between Datetime and "instant" (number of milliseconds 
   since UNIX Epoch as an int)
 
 
 ### Changed
 
 - How `any_to_datetime` handles "ambiguous" numeric values when deciding between
-  "timestamp", "instance" and "filetime"
+  "timestamp", "instant" and "filetime"
 - How `any_to_datetime` handles strings such that if a given string is a simple 
   int or float, it's cast and treated as such
 
