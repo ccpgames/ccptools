@@ -21,7 +21,6 @@ class DateTimeUtilsTest(unittest.TestCase):
         assertSame(300117804, (1979, 7, 6, 14, 3, 24))
         assertSame(300117804.321321, (1979, 7, 6, 14, 3, 24, 321321))
         assertSame(1570875489.134, (2019, 10, 12, 10, 18, 9, 134000))
-        assertSame(100000000000, (1601, 1, 1, 2, 46, 40))
 
         assertSame(None, None)
         assertSame('2013-06-10T12:13:14', (2013, 6, 10, 12, 13, 14))

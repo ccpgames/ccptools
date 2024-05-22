@@ -6,6 +6,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.0] - 2024-22-05
+
+### Added
+
+- The `logging` package to the `ccptools.structs._base`
+- Methods for casting between Datetime and timestamp (number of seconds since 
+  UNIX Epoch as a float) that work even on Windows when the built in 
+  `datetime.timestamp()` and `datetime.fromtimestamp()` methods fail for 
+  negative values and more
+- Methods for casting between Datetime and "instance" (number of milliseconds 
+  since UNIX Epoch as an int)
+
+
+### Changed
+
+- How `any_to_datetime` handles "ambiguous" numeric values when deciding between
+  "timestamp", "instance" and "filetime"
+- How `any_to_datetime` handles strings such that if a given string is a simple 
+  int or float, it's cast and treated as such
+
+
+### Removed
+
+- The `utc` argument from `any_to_datetime`
+
+
 ## [1.1.0] - 2024-04-08
 
 ### Added
